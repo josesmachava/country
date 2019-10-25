@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   template:`
   <div class="container">
   <div class="row">
-
+      <h1>Countries </h1>
       <div class="col-md-3 country"  *ngFor="let country of contries">
               <ul  >
                       <li>Name: {{ 
