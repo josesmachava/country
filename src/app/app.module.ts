@@ -1,10 +1,11 @@
+import { CountriesService } from './countries.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CountryComponent } from './country/country.component';
-
+import { HttpClientModule } from "@angular/common/http"
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,9 +13,10 @@ import { CountryComponent } from './country/country.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CountriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
