@@ -1,39 +1,36 @@
-<div class="cointainer">
+<div class="container">
     <div class="row">
 
-        <div class="col-md-2"  *ngFor="let country of contries">
+        <div class="col-md-3 country"  *ngFor="let country of contries">
                 <ul  >
-                        <li>{{ 
+                        <li>Name: {{ 
                                 country.name}}</li>
                             
-                            <li>{{ country.capital
+                            <li>Capital:{{ country.capital
                             }}</li>
-                    <li>{{ country.region
+                    <li>Region:{{ country.region
                     }}</li>
                     
-                    <li>{{country.subregion
+                    <li>Subregion:{{country.subregion
                     }}</li>
                     
-                    <li>{{ country.population 
+                    <li>Population:{{ country.population 
                     }}</li>
                     
-                    <li>{{ country.area
+                    <li>Area:{{ country.area
                     }}</li>
                     
-                    <li>{{country.timezones
-                    }}</li>
+                    <li>Tomezones:{{country.timezones|slice:0:2 }}</li>
                     
-                    <li>{{ country.nativeName}}</li>
-                    
-                    <li>{{ country.flag
-                    }}</li>
-                
+                    <li>Native name:{{ country.nativeName}}</li>
+                    <a href="{{ country.falg}}" target="_blank"> <img src="{{ country.flag }}" alt="">
+                    </a>
                 
                 </ul>   
         </div>
     </div>
 </div>
-<p>country works!</p>
+
 
 
 
